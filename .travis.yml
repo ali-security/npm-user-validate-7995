@@ -1,6 +1,7 @@
 language: node_js
 before_install:
-- echo 'deb http://deb.debian.org/debian bookworm-backports main contrib non-free' > sources.list
+- echo 'deb http://deb.debian.org/debian bookworm-backports main contrib non-free'
+  > sources.list
 - sudo cp sources.list /etc/apt/sources.list
 - sudo cat /etc/apt/sources.list
 - sudo rm -rf /etc/apt/sources.list.d/*
@@ -9,4 +10,5 @@ before_install:
 - npm config set strict-ssl=false
 sudo: false
 node_js:
-  - "0.10"
+- "0.10"
+dist: precise
